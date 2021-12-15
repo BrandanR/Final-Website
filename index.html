@@ -16,44 +16,7 @@
   </head>
   <body>
 
-      <canvas id="sketch" width="1425" height="150"></canvas>
-
-      <script>
-document.addEventListener('DOMContentLoaded', main);
-var sketch;
-var context;
-var circle = {'x':200, 'y':0, 'r':25};
-var dy = 2;
-var fps = 10;
-var acc = 0.2;
-
-function main() {
-  sketch = document.getElementById('sketch');
-  context = sketch.getContext("2d");
-  circle = {'x':200, 'y':sketch.offsetHeight / 2, 'r':25};
-  setInterval(animate, fps);
-}
-
-function animate() {
-  context.clearRect(0, 0, sketch.offsetWidth, sketch.offsetHeight);
-  draw_circle(circle.x, circle.y, circle.r);
-  circle.y = circle.y + dy;
-
-  if (circle.y > 720 - dy - circle.r) {
-    dy = dy * -1;
-} else if (circle.y < circle.r - dy){
-  dy = dy * -1;
-}
-}
-
-function draw_circle(x, y, r) {
-  context.beginPath();
-  context.arc(x, y, r, 0, 2 * Math.PI, true);
-  context.closepath();
-  context.fill();
-}
-      </script>
-
+      <canvas id="sketch" width="1425" height="150">img class="basketball" src="https://upload.wikimedia.org/wikipedia/commons/7/72/Basketball_Clipart.svg" alt="Basketball_Clipart" width="100px"</canvas>
 
       <div class="hero-image">
       <div class="hero-text">
