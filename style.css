@@ -29,6 +29,13 @@ h1,h3 {
   background-color: #1594E5;
 }
 
+div.sketch {
+background-color:#000000;
+text-align: center;
+}
+
+
+
 
 div.stuff {
   width: 250px;
