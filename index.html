@@ -52,19 +52,18 @@
     <div class="stuff" id="first"><h1>Welcome To Brandan's Homepage!</h1>
       <p>On My Site You Should See Some of My Best Projects. Not only that but going through my pages you will learn alot about me! Don't be scared!!! There's so much great content I've worked on for classes and outside of class that I would love to share.</p>
       <h2>Hobbies ~ Basketball, Video Games, Editing, Recording, Graphic Design ~</h2>
-
-
-
-
     </div>
     <div id="contain">
       <div id="sqr">
-<img class="basketball" src="https://upload.wikimedia.org/wikipedia/commons/7/72/Basketball_Clipart.svg" alt="Basketball_Clipart" width="50px" height="50px"
-</div>
-</div>
+  <img class="basketball" src="https://upload.wikimedia.org/wikipedia/commons/7/72/Basketball_Clipart.svg" alt="Basketball_Clipart" width="40px" height="40px"
+  </div>
+  </div>
+
+
+
 <script>
   window.onload = function() {
-  var t = setInterval(slide, 5);
+  var t = setInterval(slide, 1);
 
   var box = document.getElementById('sqr');
   var left = 0,
@@ -77,10 +76,10 @@
     if (pos1[0] == 0 && pos1[1] == 0) { //Top left, go right
       left = 1;
       top = 0;
-    } else if (pos1[0] == 560 && pos1[1] == 0) { //Top right, go down
+    } else if (pos1[0] == 120 && pos1[1] == 0) { //Top right, go down
       left = 0;
       top = 1;
-    } else if (pos1[0] == 560 && pos1[1] == 160) { //Bottom right, go left
+    } else if (pos1[0] == 120 && pos1[1] == 160) { //Bottom right, go left
       left = -1;
       top = 0;
     } else if (pos1[0] == 0 && pos1[1] == 160) { //Bottom left, go up
