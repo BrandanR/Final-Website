@@ -4,6 +4,22 @@
         #sketch {
           border:1px solid #000;
         }
+
+        #contain {
+          position: relative;
+          width: 740px;
+          height: 480px;
+          background-color: ;
+        }
+
+        #sqr {
+          position: absolute;
+          width: 40px;
+          height: 40px;
+          background-color: ;
+        }
+
+
   </style>
 
   <head>
@@ -37,13 +53,45 @@
       <p>On My Site You Should See Some of My Best Projects. Not only that but going through my pages you will learn alot about me! Don't be scared!!! There's so much great content I've worked on for classes and outside of class that I would love to share.</p>
       <h2>Hobbies ~ Basketball, Video Games, Editing, Recording, Graphic Design ~</h2>
 
-      <img class="basketball" src="https://upload.wikimedia.org/wikipedia/commons/7/72/Basketball_Clipart.svg" alt="Basketball_Clipart" width="50px" height="50px"
-      <canvas id="sketch" width="1425" height="150"></canvas>
+
 
 
     </div>
+    <div id="contain">
+      <div id="sqr">
+<img class="basketball" src="https://upload.wikimedia.org/wikipedia/commons/7/72/Basketball_Clipart.svg" alt="Basketball_Clipart" width="50px" height="50px"
+</div>
+</div>
+<script>
+  window.onload = function() {
+  var t = setInterval(slide, 5);
 
+  var box = document.getElementById('sqr');
+  var left = 0,
+  top = 0;
 
+  function slide() {
+    var pos1 = [parseInt(box.style.left || 0), parseInt(box.style.top || 0)]
+
+    // console.log(pos1);
+    if (pos1[0] == 0 && pos1[1] == 0) { //Top left, go right
+      left = 1;
+      top = 0;
+    } else if (pos1[0] == 560 && pos1[1] == 0) { //Top right, go down
+      left = 0;
+      top = 1;
+    } else if (pos1[0] == 560 && pos1[1] == 160) { //Bottom right, go left
+      left = -1;
+      top = 0;
+    } else if (pos1[0] == 0 && pos1[1] == 160) { //Bottom left, go up
+      left = 0;
+      top = -1;
+    }
+    box.style.left = (parseInt(box.style.left || 0) + left) + "px";
+    box.style.top = (parseInt(box.style.top || 0) + top) + "px";
+  }
+}
+</script>
   <script src="navbarv01.js"></script>
   </body>
 </html>
