@@ -10,23 +10,28 @@
   </head>
   <body>
     <canvas id="sketch" width="1425" height="150" style="border: 1px black;"></canvas>
+
 <script>
 document.addEventListener('DOMContentLoaded', main);
 var sketch;
 var context;
+
 function main() {
 	sketch = document.getElementById('sketch');
 	context = sketch.getContext("2d");
-	sketch.addEventListener("click", function(event) {
+  context.fillStyle = "#FFBE00";
+  sketch.addEventListener("click", function(event) {
 		draw_exclamation(event.x, event.y);
 	});
 }
 function draw_exclamation(x, y) {
-	context.fillRect(x, y, 50, 100);
-	draw_circle(x + 25, y + 150, 25);
+	context.fillRect(x, y, 25, 50);
+	draw_circle(x + 20, y + -10, 20);
+  context.fillStyle = "#FFBE00";
 }
 function draw_circle(x, y, r) {
-	context.beginPath();
+  context.fillStyle = "#FFBE00";
+  context.beginPath();
 	context.arc(x, y, r, 0, 2 * Math.PI, true);
 	context.closePath();
 	context.fill();
@@ -51,7 +56,10 @@ function draw_circle(x, y, r) {
     <div class="stuff" id="first"><h2>Contact Me!</h2>
       <h3>brandanr3055@nqchs.org</h3>
     </div>
+    <div class="sketch">
 
+
+    </div>
 
   <script src="navbarv01.js"></script>
   </body>
